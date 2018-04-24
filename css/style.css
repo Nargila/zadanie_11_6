@@ -1,0 +1,33 @@
+body .board .column-container .column .column-card-list .card .btn-delete {
+     float: left; }
+
+.column {
+	margin: 10px 5px 5px 5px;
+	background-color: #b0d1c5;
+	padding: 10px;
+	min-width: 250px;
+	min-height:250px;
+	text-align: center;
+
+
+.board {
+	padding: 50px;
+	margin: 5px;
+}
+
+.create-column {
+	margin: 10px;
+	padding: 10px;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 10px;
+  padding: 0;
+}
+
+button.add-card {
+	floast: left;
+	display: inline-block;
+}
