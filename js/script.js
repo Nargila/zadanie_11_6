@@ -26,12 +26,12 @@ $(function(){
 
 		function createColumn(){
 			// ELEMENTY KOLUMNY
-			var $column = $('<div>').addClass('column card bg-light mb-3 ');
+			var $column = $('<div>').addClass('column ');
 			var $columnTitle = $('<h2>').addClass('column-title ').text(self.name);
 			var $columnCardList = $('<ul>').addClass('column-card-list');
-			var $columnDelete = $('<button>').addClass('btn-delete badge badge-secondary').text('x');
-			var $columnAddCard = $('<button>').addClass('add-card').text('Add a card');	
-			
+			var $columnDelete = $('<button>').addClass('btn-delete label label-primary').text('x');
+			var $columnAddCard = $('<button>').addClass('add-card btn btn-default').text('Add a card');	
+			var $columnHr = $('<hr>').addClass('breakline');
 			// DODANIE EVENTÓW (USUŃ KOLUMNĘ, DODAJ KARTĘ)
 			$columnDelete.click(function() {
 				self.removeColumn();
@@ -40,9 +40,10 @@ $(function(){
 				self.addCard(new Card(prompt("Enter the name of the card")));
 			});
 			//KONSTRUKCJA KOLUMNY
-			$column.append($columnTitle)
-	        .append($columnDelete)
+			$column.append($columnDelete)
+			.append($columnTitle)
 	        .append($columnAddCard)
+	        .append($columnHr)
 	        .append($columnCardList);
 			return $column;
 		}
@@ -67,9 +68,9 @@ $(function(){
 
 		function createCard() {
 		//ELEMENTY KARTY
-			var $card = $('<li>').addClass('card list-group-item');
+			var $card = $('<li>').addClass('list-group-item');
 		    var $cardDescription = $('<p>').addClass('card-description').text(self.description);
-		    var $cardDelete = $('<button>').addClass('btn-delete badge badge-primary').text('x');
+		    var $cardDelete = $('<button>').addClass('btn-delete').text('x');
 		    //DODANIE EVENTU - USUWANIE KARTY
 		    $cardDelete.click(function() {
 		    	self.removeCard();
